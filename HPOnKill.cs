@@ -44,7 +44,6 @@ namespace HPOnKill {
         {
             CCSPlayerController player = @event.Userid;
             CCSPlayerController attacker = @event.Attacker;
-            var attacker_entity = attacker.Index;
             if (player == null || !player.IsValid || attacker == null || !attacker.IsValid) return HookResult.Continue;
             if (player == attacker) return HookResult.Continue;
             if (Config.GainHP)
